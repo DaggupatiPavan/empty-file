@@ -3,7 +3,7 @@ pipeline{
   stages{
     stage('Git Clone'){
           steps{
-            git 'https://github.com/DaggupatiPavan/empty-file.git
+            git 'https://github.com/DaggupatiPavan/empty-file.git'
           }
     }
     stage('Validate'){
@@ -15,7 +15,6 @@ pipeline{
           steps{
             sh 'mvn compile'
           }
-    }
-  }
+   }
 }
     
