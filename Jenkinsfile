@@ -1,20 +1,20 @@
 pipeline{
-  agent any
-  stages{
-    stage('Git Clone'){
-          steps{
-            git 'https://github.com/DaggupatiPavan/empty-file.git'
-          }
+    agent any
+    stages{
+        stage('Git Clone'){
+            steps{
+                git 'https://github.com/DaggupatiPavan/empty-file.git'
+            }
+        }
+        stage('Test'){
+            steps{
+                echo "Test sucessful"
+            }
+        }
+        stage('Build'){
+            steps{
+                echo "Build Sucessful"
+            }
+        }
     }
-    stage('Validate'){
-          steps{
-            sh 'mvn validate'
-          }
-    }
-    stage('compile'){
-          steps{
-            sh 'mvn compile'
-          }
-   }
 }
-    
